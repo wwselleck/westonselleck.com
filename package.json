@@ -1,0 +1,24 @@
+{
+  "name": "westonselleck.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ts-node ./build/build",
+    "watch": "ts-node ./build/watch"
+  },
+  "devDependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "@types/node": "^10.9.2",
+    "@types/react-dom": "^16.0.7",
+    "http-server": "^0.11.1",
+    "mkdirp": "^0.5.1",
+    "node-watch": "^0.5.8",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "recursive-readdir": "^2.2.2"
+  }
+}
