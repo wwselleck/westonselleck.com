@@ -1,0 +1,31 @@
+* {
+  color: white !important;
+  text-shadow: none !important;
+}
+
+body {
+  animation: colorchange 30s infinite;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: 600;
+    color: white;
+}
+
+.subheader {
+    font-size: 20px;
+}
+
+.indexSection {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@keyframes colorchange
+{
+  0%   {background: #152026;}
+  50% {background: #221426;}
+  100%   {background: #152026;}
+}
+
