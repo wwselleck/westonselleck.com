@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { Link } from 'gatsby';
 import { Header } from "../components/typography";
 
 import styles from "./nav.module.css";
@@ -7,7 +7,7 @@ import styles from "./nav.module.css";
 export const Navigation = () => (
   <div className={styles.header}>
     <div className={styles.headerWrapper}>
-      <Header size="medium">Weston Selleck</Header>
+      <Link to="/"><Header size="medium">Weston Selleck</Header></Link>
     </div>
   </div>
 );

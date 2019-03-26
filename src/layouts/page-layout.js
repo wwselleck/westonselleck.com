@@ -12,7 +12,7 @@ export default class PageLayout extends React.Component {
     let { children } = this.props;
     return (
       <RootLayout>
-        <Navigation></Navigation>
+        <Navigation />
         {children}
       </RootLayout>
     )

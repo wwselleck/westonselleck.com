@@ -37,6 +37,3 @@ export const RootLayout = ({ children, data }) => (
   />
 );
 
-RootLayout.propTypes = {
-  children: PropTypes.func
-};
