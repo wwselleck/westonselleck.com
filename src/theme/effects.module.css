@@ -1,0 +1,12 @@
+/*
+@keyframes colorchange
+{
+  0%   {background: #152026;}
+  50% {background: #221426;}
+  100%   {background: #152026;}
+}
+
+.colorchange {
+  animation: colorchange 30s infinite;
+}
+*/

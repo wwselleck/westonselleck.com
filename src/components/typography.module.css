@@ -1,0 +1,28 @@
+.header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header-xsmall {
+  composes: header;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header-small {
+  composes: header;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-medium {
+  composes: header;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.header-large {
+  composes: header;
+  font-size: 48px;
+  font-weight: 600;
+}

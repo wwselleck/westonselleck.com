@@ -1,31 +1,21 @@
-* {
+.indexWrapper * {
   color: white !important;
   text-shadow: none !important;
 }
 
-body {
-  animation: colorchange 30s infinite;
-}
-
-.name {
-    font-size: 48px;
-    font-weight: 600;
-    color: white;
-}
-
-.subheader {
-    font-size: 20px;
+.indexWrapper {
+  margin: 100px auto;
+  max-width: 80%;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0;
 }
 
 .indexSection {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-@keyframes colorchange
-{
-  0%   {background: #152026;}
-  50% {background: #221426;}
-  100%   {background: #152026;}
+.indexSection > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
