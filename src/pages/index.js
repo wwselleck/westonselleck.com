@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import { RootLayout } from "../layouts/root-layout";
 
@@ -39,6 +39,7 @@ export default class extends React.Component {
     document.body.className = "";
   }
   render() {
+    let { data } = this.props;
     return (
       <RootLayout>
         <div className={styles.indexWrapper}>
@@ -55,6 +56,11 @@ export default class extends React.Component {
           <IndexSection>
             <IndexSectionHeader>Projects</IndexSectionHeader>
             <Project
+              link="https://github.com/wwselleck/it-could-be-trivia"
+              title="it-could-be-trivia"
+              description="A chat bot for playing trivia"
+            />
+            <Project
               link="https://github.com/wwselleck/bolt-interactive"
               title="bolt-interactive"
               description="An interactive CLI for managing your bolt projects"
@@ -64,6 +70,15 @@ export default class extends React.Component {
               title="DriveCMS"
               description="Use Google Drive as a simple CMS for your website"
             />
+          </IndexSection>
+
+          <IndexSection>
+            <IndexSectionHeader>Bug Notes</IndexSectionHeader>
+            <div>
+              {data.allMarkdownRemark.edges.filter(({ node }) => node.frontmatter.tags.includes('bug-notes')).map(({ node }) => (
+                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+              ))}
+            </div>
           </IndexSection>
 
           <IndexSection>
@@ -80,3 +95,21 @@ export default class extends React.Component {
   }
 }
 
+
+export const query = graphql`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              tags
+              title
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+`
