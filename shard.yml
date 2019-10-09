@@ -1,0 +1,13 @@
+name: weston.dev
+version: 0.1.0
+
+authors:
+  - your-name-here <wwselleck@gmail.com>
+
+targets:
+  weston.dev:
+    main: src/weston.dev.cr
+
+crystal: 0.30.1
+
+license: MIT
