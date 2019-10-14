@@ -1,0 +1,69 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  color: white !important;
+  text-shadow: none !important;
+  background: #00091a;
+}
+a {
+  color: #99ccff;
+}
+
+ol,
+ul {
+  list-style: initial;
+  li {
+    padding: 5px 0;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+* {
+  line-height: 1.5;
+}
+
+.indexWrapper * {
+  color: white !important;
+  text-shadow: none !important;
+}
+
+.indexWrapper {
+  margin: 100px auto;
+  max-width: 80%;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0;
+}
+
+.indexSection {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.indexSection > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.header.xsmall {
+  font-size: 16px;
+  font-weight: 600;
+}
+.header.small {
+  font-size: 20px;
+  font-weight: 500;
+}
+.header.medium {
+  font-size: 32px;
+  font-weight: 600;
+}
+.header.large {
+  font-size: 48px;
+  font-weight: 600;
+}

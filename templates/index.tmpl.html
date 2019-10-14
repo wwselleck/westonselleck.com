@@ -1,0 +1,38 @@
+{{ template "layout.tmpl.html" . }}
+
+{{define "project"}}
+<div>
+  <a href="{{.Link}}"> {{.Title}}</a>
+  - {{.Description}}
+</div>
+{{ end }}
+
+{{ define "main" }}
+<div class="indexWrapper">
+  <div class="header large">Weston Selleck</div>
+  <div class="header small">Software Developer at Atlassian</div>
+
+  <div class="indexSection">
+    <div class="header xsmall">Internet Places to Find Me</div>
+    <div>
+      <a href="https://twitter.com/bbbbbbbbbunnies">Twitter</a>
+    </div>
+  </div>
+
+  <div class="indexSection">
+    <div class="header xsmall">Projects</div>
+    {{ range.Projects }}
+    {{template "project" .}}
+    {{ end }}
+  </div>
+
+  <div class="indexSection">
+    <div class="header xsmall">Misc</div>
+    <a
+      href="https://docs.google.com/spreadsheets/d/1YAlCh6L0o0rLPLToGFb5x9du7NYFuplulTqX8ZKp3cs/edit?usp=sharing"
+    >
+      My spreadsheet of music ratings</a
+    >
+  </div>
+</div>
+{{ end }}

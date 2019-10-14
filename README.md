@@ -1,0 +1,3 @@
+# weston.dev
+
+`go run .`
