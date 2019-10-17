@@ -17,6 +17,8 @@ services:
       - ./data/certbot/www:/var/www/certbot
   go-web-app:
     restart: always
+    ports:
+      - "8080"
     build:
       dockerfile: Dockerfile
       context: .

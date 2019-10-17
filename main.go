@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"fmt"
 	"net/http"
 )
 
@@ -67,5 +68,6 @@ func main() {
 		http.FileServer((http.Dir("./public"))),
 	))
 	http.HandleFunc("/", handleDefault(viewRenderer))
-	http.ListenAndServe(":80", nil)
+	fmt.Println("Listening on 8080")
+	http.ListenAndServe(":8080", nil)
 }

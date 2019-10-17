@@ -9,5 +9,5 @@ FROM alpine:3.9
 RUN apk --no-cache add ca-certificates
 COPY --from=build /go/src/app /go
 WORKDIR /go
-EXPOSE 80
+EXPOSE 8080
 ENTRYPOINT /go/web-app --port 80
