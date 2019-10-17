@@ -67,5 +67,5 @@ func main() {
 		http.FileServer((http.Dir("./public"))),
 	))
 	http.HandleFunc("/", handleDefault(viewRenderer))
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":80", nil)
 }
