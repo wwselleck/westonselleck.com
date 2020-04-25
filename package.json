@@ -1,0 +1,29 @@
+{
+  "name": "weston.dev",
+  "version": "1.0.0",
+  "description": "`go run .`",
+  "main": "index.js",
+  "dependencies": {
+    "@types/express-pino-logger": "^4.0.2",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "express": "^4.17.1",
+    "express-pino-logger": "^4.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwselleck/weston.dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wwselleck/weston.dev/issues"
+  },
+  "homepage": "https://github.com/wwselleck/weston.dev#readme"
+}

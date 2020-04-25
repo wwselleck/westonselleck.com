@@ -1,0 +1,22 @@
+[
+  {
+    "link": "https://github.com/wwselleck/weston.dev",
+    "title": "weston.dev",
+    "description": "This website"
+  },
+  {
+    "link": "https://github.com/wwselleck/it-could-be-trivia",
+    "title": "it-could-be-trivia",
+    "description": "A chat bot for playing trivia"
+  },
+  {
+    "link": "https://github.com/wwselleck/bolt-interactive",
+    "title": "bolt-interactive",
+    "description": "An interactive CLI for managing Bolt projects"
+  },
+  {
+    "link": "https://github.com/wwselleck/DriveCMS",
+    "title": "DriveCMS",
+    "description": "Use Google Drive as a simple CMS for your website"
+  }
+]
