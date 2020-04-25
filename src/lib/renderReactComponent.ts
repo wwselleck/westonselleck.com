@@ -4,7 +4,7 @@ import ReactDOMServer from "react-dom/server";
 export function renderReactComponent(comp: React.ReactElement) {
   return `
     <head>
-      <title>Weston Sellec</title>
+      <title>Weston Selleck</title>
       <link
         href="https://fonts.googleapis.com/css?family=Noto+Sans"
         rel="stylesheet"
