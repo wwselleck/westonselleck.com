@@ -5,6 +5,11 @@
     "description": "This website"
   },
   {
+    "link": "https://github.com/wwselleck/treats",
+    "title": "treats",
+    "description": "A highly-customizable content aggregation app"
+  },
+  {
     "link": "https://github.com/wwselleck/it-could-be-trivia",
     "title": "it-could-be-trivia",
     "description": "A chat bot for playing trivia"
