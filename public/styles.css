@@ -25,9 +25,12 @@ em {
   line-height: 1.5;
 }
 
-.indexWrapper * {
-  color: white !important;
+.indexWrapper {
+  color: white;
   text-shadow: none !important;
+}
+a {
+  color: white;
 }
 
 .indexWrapper {
@@ -65,5 +68,32 @@ em {
 }
 .header.large {
   font-size: 48px;
-  font-weight: 600;
+}
+
+.mostRecentCommit {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+}
+.mostRecentCommit p {
+  padding-left: 8px;
+}
+.mostRecentCommit img {
+  width: 20px;
+}
+.mostRecentCommit .repo {
+  font-weight: bold;
+}
+.mostRecentCommit .message,
+.repo a {
+  text-decoration: none;
+}
+.mostRecentCommit .message,
+.repo a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+}
+.mostRecentCommit .date {
+  font-size: 0.9em;
 }

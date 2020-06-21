@@ -6,9 +6,8 @@ export function renderReactComponent(comp: React.ReactElement) {
     <head>
       <title>Weston Selleck</title>
       <link
-        href="https://fonts.googleapis.com/css?family=Noto+Sans"
-        rel="stylesheet"
-      />
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
       <link rel="stylesheet" href="public/reset.css" type="text/css" />
       <link rel="stylesheet" href="public/styles.css" type="text/css" />
     </head>
