@@ -2,11 +2,9 @@ FROM node:latest
 
 WORKDIR /usr/app
 
-COPY package.json .
-COPY package-lock.json .
-COPY tsconfig.json .
-COPY src ./src
+COPY . .
 RUN npm install
 RUN npm run build
+RUN ls
 
 CMD ["npm", "start"]
