@@ -1,11 +1,10 @@
 import axios from "axios";
-import { config } from "../config";
 
-export async function getMostRecentCommit(username: string) {
+export async function getMostRecentCommit(username: string, token: string) {
   const api = axios.create({
     auth: {
       username,
-      password: config.github.token,
+      password: token,
     },
   });
 

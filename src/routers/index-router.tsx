@@ -3,14 +3,22 @@ import * as React from "react";
 import { renderReactComponent } from "../lib/renderReactComponent";
 import { Index } from "../components/Index";
 import * as Github from "../services/github";
-import { config } from "../config";
-import * as Data from "../services/data";
+import { Config } from "../config";
+import { Data } from "../services/data";
+
+interface IndexRouterArgs {
+  config: Config;
+  data: Data;
+}
 
 export class IndexRouter {
-  static create({ projects, links }: Data.Data) {
+  static create({ data: { projects, links }, config }: IndexRouterArgs) {
     const router = express.Router();
     router.get("/", async (_, res) => {
-      const commit = await Github.getMostRecentCommit(config.github.username);
+      const commit = await Github.getMostRecentCommit(
+        config.github.username,
+        config.github.token
+      );
       res.header("Content-Type", "text/html");
       res.send(
         renderReactComponent(

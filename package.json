@@ -12,6 +12,8 @@
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "express-pino-logger": "^4.0.0",
+    "google-spreadsheet": "^3.1.15",
+    "googleapis": "^39.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.8.3"

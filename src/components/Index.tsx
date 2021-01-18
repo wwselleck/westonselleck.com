@@ -26,7 +26,7 @@ export const Index = ({ projects, links, commit }: IndexProps) => {
   return (
     <div className="indexWrapper">
       <div className="header large">Weston Selleck</div>
-      <MostRecentCommit commit={commit} />
+      {commit && <MostRecentCommit commit={commit} />}
 
       <IndexSection>
         <div className="header xsmall">Internet Places to Find Me</div>
