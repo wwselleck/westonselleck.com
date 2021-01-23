@@ -14,12 +14,12 @@ export interface Config {
       privateKey: string;
     };
   };
+  games: {
+    sheetId: string;
+  };
 }
 
 export const load = async () => {
-  const googleServiceAccount = JSON.parse(
-    await readFile("~/weston-dev-9ba2c51bed1a.json", "utf-8")
-  );
   return {
     github: {
       username: process.env.GITHUB_USERNAME,
@@ -27,9 +27,15 @@ export const load = async () => {
     },
     google: {
       serviceAccount: {
-        email: googleServiceAccount.client_email,
-        privateKey: googleServiceAccount.private_key,
+        email: process.env.GOOGLE_SERVICE_EMAIL,
+        privateKey: process.env.GOOGLE_SERVICE_PRIVATE_KEY.replace(
+          /\\n/g,
+          "\n"
+        ),
       },
+    },
+    games: {
+      sheetId: process.env.GAMES_SHEET_ID,
     },
   };
 };

@@ -15,6 +15,7 @@ export async function start() {
   app.use(expressPino());
   app.use("/public", express.static(path.join(".", "public")));
   app.use("", IndexRouter.create({ data, config }));
-  app.use("/games", GamesRouter.create({ config }));
+  app.use("/games", await GamesRouter.create({ config }));
   app.listen(8080);
+  console.log("Running on port 8080");
 }

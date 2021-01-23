@@ -3,6 +3,7 @@ import * as React from "react";
 import * as Dates from "../lib/date";
 
 import { IndexSection } from "./IndexSection";
+import { Header } from "./Header";
 
 interface IndexProps {
   links: Array<{ text: string; href: string }>;
@@ -25,7 +26,7 @@ interface IndexProps {
 export const Index = ({ projects, links, commit }: IndexProps) => {
   return (
     <div className="indexWrapper">
-      <div className="header large">Weston Selleck</div>
+      <Header />
       {commit && <MostRecentCommit commit={commit} />}
 
       <IndexSection>
@@ -51,6 +52,9 @@ export const Index = ({ projects, links, commit }: IndexProps) => {
         <a href="https://docs.google.com/spreadsheets/d/1YAlCh6L0o0rLPLToGFb5x9du7NYFuplulTqX8ZKp3cs/edit?usp=sharing">
           My spreadsheet of music ratings
         </a>
+        <div>
+          <a href="/games">Every game I've played</a>
+        </div>
       </IndexSection>
     </div>
   );

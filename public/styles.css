@@ -11,7 +11,7 @@ a {
 
 ol,
 ul {
-  list-style: initial;
+  list-style: none;
   li {
     padding: 5px 0;
   }
@@ -96,4 +96,37 @@ a:focus {
 }
 .mostRecentCommit .date {
   font-size: 0.9em;
+}
+
+.gamesList {
+  margin-top: 48px;
+}
+.gamesListItem {
+  margin-bottom: 12px;
+}
+.gamesListItem > div {
+  display: inline-block;
+}
+.gamesListItemPosition {
+  display: inline-block;
+  margin-right: 24px;
+  font-size: 44px;
+  width: 52px;
+  text-align: right;
+}
+.gamesListItemName {
+  margin-right: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+.gamesListItemDetails {
+  font-size: 13px;
+  margin-top: 8px;
+  color: lightslategrey;
+}
+.gamesListItem img {
+  width: 36px;
+  display: inline-block;
+  margin-right: 12px;
 }

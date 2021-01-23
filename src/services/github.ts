@@ -8,7 +8,6 @@ export async function getMostRecentCommit(username: string, token: string) {
     },
   });
 
-  console.log(username);
   const result = await api.get(
     `https://api.github.com/users/${username}/events`
   );
