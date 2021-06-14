@@ -13,6 +13,7 @@ export function renderReactComponent(comp: React.ReactElement) {
     </head>
     <body>
       ${ReactDOMServer.renderToString(comp)}
+      <script src="public/index.js"></script>
     </body>
   `;
 }

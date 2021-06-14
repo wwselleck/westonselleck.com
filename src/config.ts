@@ -28,7 +28,7 @@ export const load = async () => {
     google: {
       serviceAccount: {
         email: process.env.GOOGLE_SERVICE_EMAIL,
-        privateKey: process.env.GOOGLE_SERVICE_PRIVATE_KEY.replace(
+        privateKey: process.env.GOOGLE_SERVICE_PRIVATE_KEY?.replace(
           /\\n/g,
           "\n"
         ),

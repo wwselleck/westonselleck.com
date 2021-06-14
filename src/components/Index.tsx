@@ -26,36 +26,15 @@ interface IndexProps {
 export const Index = ({ projects, links, commit }: IndexProps) => {
   return (
     <div className="indexWrapper">
-      <Header />
-      {commit && <MostRecentCommit commit={commit} />}
-
-      <IndexSection>
-        <div className="header xsmall">Internet Places to Find Me</div>
-        {links.map((l) => (
-          <div>
-            <a href={l.href}>{l.text}</a>
-          </div>
-        ))}
-      </IndexSection>
-
-      <IndexSection>
-        <div className="header xsmall">Projects</div>
-        {projects.map((project) => (
-          <div>
-            <a href={project.link}>{project.title}</a> - {project.description}
-          </div>
-        ))}
-      </IndexSection>
-
-      <IndexSection>
-        <div className="header xsmall">Misc</div>
-        <a href="https://docs.google.com/spreadsheets/d/1YAlCh6L0o0rLPLToGFb5x9du7NYFuplulTqX8ZKp3cs/edit?usp=sharing">
-          My spreadsheet of music ratings
-        </a>
-        <div>
-          <a href="/games">Every game I've played</a>
+      <div className="indexMain">
+        <div className="mePic">
+          <div className="mePicBackground"></div>
         </div>
-      </IndexSection>
+        <p className="indexMainText">
+          Hi, I'm <b>Weston Selleck</b>. I'm a software developer
+          currently working at <b>Atlassian</b> on Trello. Please enjoy this complimentary <span id="dragItemName">lollipop</span> during your stay on my website <span id="dragItem"></span>.
+        </p>
+      </div>
     </div>
   );
 };
