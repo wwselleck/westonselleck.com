@@ -69,7 +69,15 @@ const itemChoices = [
   ['candy', '🍬'],
   ['lemon', '🍋'],
   ['fries', '🍟'],
-  ['popcorn', '🍿']
+  ['popcorn', '🍿'],
+  ['egg', '🥚'],
+  ['spaghetti', '🍝'],
+  ['sushi', '🍣'],
+  ['ice cream', '🍦'],
+  ['doughnut', '🍩'],
+  ['juice box', '🧃'],
+  ['coffee', '☕'],
+  ['pie', '🥧']
 ]
 
 

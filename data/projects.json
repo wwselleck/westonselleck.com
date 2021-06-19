@@ -1,27 +1,38 @@
 [
-  {
-    "link": "https://github.com/wwselleck/weston.dev",
-    "title": "weston.dev",
-    "description": "This website"
-  },
+    {
+        "title": "Solaire",
+        "description": "A simple framework with an intuitive interface for creating Discord bots using Node.",
+        "link": "https://github.com/wwselleck/solaire-discord",
+        "emoji": "⚔️"
+    },
   {
     "link": "https://github.com/wwselleck/treats",
     "title": "treats",
-    "description": "A highly-customizable content aggregation app"
+    "description": "A highly-customizable content aggregation app",
+    "emoji": "🍬"
+  },
+  {
+    "link": "https://github.com/wwselleck/weston.dev",
+    "title": "weston.dev",
+    "description": "This website",
+    "emoji": "🖥️"
   },
   {
     "link": "https://github.com/wwselleck/it-could-be-trivia",
     "title": "it-could-be-trivia",
-    "description": "A chat bot for playing trivia"
+    "description": "A chat bot for playing trivia",
+    "emoji": "🙋"
   },
   {
     "link": "https://github.com/wwselleck/bolt-interactive",
     "title": "bolt-interactive",
-    "description": "An interactive CLI for managing Bolt projects"
+    "description": "An interactive CLI for managing Bolt projects",
+    "emoji": "⚡"
   },
   {
     "link": "https://github.com/wwselleck/DriveCMS",
     "title": "DriveCMS",
-    "description": "Use Google Drive as a simple CMS for your website"
+    "description": "Use Google Drive as a simple CMS for your website",
+    "emoji": "💾"
   }
 ]

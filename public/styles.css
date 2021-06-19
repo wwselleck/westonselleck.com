@@ -1,62 +1,96 @@
+/*
+ *
+ *
+ * GENERAL
+ *
+ *
+ *
+ */
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&display=swap');
 
 :root {
     --text-color: #161717;
+
+    --pink: #f72585ff;
+    --purple-1: #b5179eff;
+    --purple-2: #7209b7ff;
+    --purple-3: #560badff;
+    --purple-4: #480ca8ff;
+    --blue-5: #3a0ca3ff;
+    --blue-4: #3f37c9ff;
+    --blue-3: #4361eeff;
+    --blue-2: #4895efff;
+    --blue-1: #4cc9f0ff;
 }
 
 body {
   font-family: "Mukta", sans-serif;
-  font-size: 16px;
-  color: black !important;
+  color: var(--text-color) !important;
   text-shadow: none !important;
   background: white;
+  font-size: 16px;
 }
-
 a {
-  color: #99ccff;
+    color: var(--blue-4);
+  text-decoration: none;
+}
+a:hover {
+    background-image: linear-gradient(270deg, var(--purple-2), var(--pink));
+    background-clip: text;
+    animation: GradientAnimation 2s ease infinite;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
 }
 b {
     font-weight: 600;
 }
-
-ol,
-ul {
-  list-style: none;
-  li {
-    padding: 5px 0;
-  }
-}
-
 em {
   font-style: italic;
 }
-
 * {
   line-height: 1.5;
 }
-
 p {
  color: var(--text-color);
  font-weight: 300;
 }
 
+/*
+ *
+ *
+ * Index
+ *
+ *
+ *
+ */
+
 .indexWrapper {
 }
 
-.indexMain {
+.indexMainColumn {
     width: 1000px;
     max-width: 80%;
     margin: 400px auto;
+}
+
+.indexMainContent {
     display: flex;
+    margin-bottom: 164px;
 }
 .indexMainText {
     font-size: 24px;
     line-height: 36px;
-
 }
 #dragItem, #dragItemClone {
     cursor: pointer;
 }
+
+/*
+ * ME PIC
+ */
 
 .mePic {
     background: url("me.jpg");
@@ -75,19 +109,97 @@ p {
     width: 230px;
     height: 230px;
     border-radius: 50%;
-       background: linear-gradient(270deg, #44ffef, #ffea49, #68ff93);
+       background: linear-gradient(90deg, var(--blue-1), var(--purple-1), var(--pink));
     background-size: 600% 600%;
     z-index: -1;
-    animation: MePicBackgroundAnimation 15s ease infinite;
+    animation: GradientAnimation 15s ease infinite;
     flex-shrink: 0;
 }
-@keyframes MePicBackgroundAnimation {
+@keyframes GradientAnimation {
         0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
 
+/*
+ * Main Content Links
+ */
 
+.indexLinks {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  font-size: 18px;
+}
+.indexLinks>span {
+    display: inline-flex;
+    align-items: center;
+}
+.indexLinks>span::after {
+    content: "\00b7";
+    margin: 0 16px;
+}
+.indexLinks>span:last-child::after {
+    content: "";
+}
+.indexLinks>span>img{
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/*
+ * Index Secondary Content
+ */
+
+.smallColumn {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.indexSectionHeader {
+    display: flex;
+    align-items: center;
+  font-size: 24px;
+  font-weight: 300;
+    margin-bottom: 32px;
+}
+
+.indexSectionHeaderSquare {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 16px;
+}
+.indexSectionHeaderSquare.purple {
+    background-color: var(--purple-1);
+}
+
+/*
+ * Index Projects Section
+ */
+.indexProject {
+    margin-bottom: 24px;
+}
+.indexProject a {
+    margin-left: 8px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.indexProject p {
+    margin-top: 12px;
+}
+
+
+
+/*
+ *
+ *
+ * MOST RECENT COMMIT
+ *
+ *
+ *
+ */
 .mostRecentCommit {
   display: flex;
   align-items: center;
@@ -116,6 +228,14 @@ a:focus {
   font-size: 0.9em;
 }
 
+/*
+ *
+ *
+ * GAMES PAGE
+ *
+ *
+ *
+ */
 .gamesList {
   margin-top: 48px;
 }
@@ -148,3 +268,4 @@ a:focus {
   display: inline-block;
   margin-right: 12px;
 }
+

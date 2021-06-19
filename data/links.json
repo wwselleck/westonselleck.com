@@ -1,6 +1,12 @@
 [
   {
     "text": "Github",
-    "href": "https://github.com/wwselleck"
+    "href": "https://github.com/wwselleck",
+    "iconUrl": "public/github-logo-64.png"
+  },
+  {
+    "text": "LinkedIn",
+    "href": "https://www.linkedin.com/in/weston-selleck-358b7942/",
+    "iconUrl": "public/linkedin-logo-512.png"
   }
 ]

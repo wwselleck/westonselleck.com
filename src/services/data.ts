@@ -12,6 +12,7 @@ export interface Project {
   link: string;
   title: string;
   description: string;
+  emoji: string;
 }
 const dataPath = (fileName: string) => `./data/${fileName}`;
 

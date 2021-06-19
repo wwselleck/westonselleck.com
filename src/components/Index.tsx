@@ -4,13 +4,15 @@ import * as Dates from "../lib/date";
 
 import { IndexSection } from "./IndexSection";
 import { Header } from "./Header";
+import { Square } from './Square';
 
 interface IndexProps {
-  links: Array<{ text: string; href: string }>;
+  links: Array<{ text: string; href: string, iconUrl?: string }>;
   projects: Array<{
     link: string;
     title: string;
     description: string;
+    emoji: string;
   }>;
   commit?: {
     link: string;
@@ -26,18 +28,60 @@ interface IndexProps {
 export const Index = ({ projects, links, commit }: IndexProps) => {
   return (
     <div className="indexWrapper">
-      <div className="indexMain">
-        <div className="mePic">
-          <div className="mePicBackground"></div>
+      <div className="indexMainColumn">
+        <div className="indexMainContent">
+          <div className="mePic">
+            <div className="mePicBackground"></div>
+          </div>
+          <div>
+            <p className="indexMainText">
+              Hi, I'm <b>Weston Selleck</b>. I'm a software developer
+              currently working at <b>Atlassian</b> on Trello. Please enjoy this complimentary <span id="dragItemName">lollipop</span> during your stay on my website <span id="dragItem"></span>.
+            </p>
+            <div className="indexLinks">
+              {links.map(link => {
+                return <span>
+                  {link.iconUrl && <img src={link.iconUrl} />}
+                  <a href={link.href}>{link.text}</a>
+                </span>
+              })}
+            </div>
+          </div>
         </div>
-        <p className="indexMainText">
-          Hi, I'm <b>Weston Selleck</b>. I'm a software developer
-          currently working at <b>Atlassian</b> on Trello. Please enjoy this complimentary <span id="dragItemName">lollipop</span> during your stay on my website <span id="dragItem"></span>.
-        </p>
+        <div className="smallColumn">
+          <ProjectsSection projects={projects}/>
+        </div>
       </div>
     </div>
   );
 };
+
+interface SectionHeaderProps {
+  color: string;
+}
+const SectionHeader: React.FC<SectionHeaderProps> = ({children, color}) => {
+  return <div className="indexSectionHeader">
+    <div className={`indexSectionHeaderSquare ${color}`} />
+    {children}
+  </div>
+}
+
+interface ProjectsSectionProps {
+  projects: IndexProps['projects'];
+}
+const ProjectsSection: React.FC<ProjectsSectionProps> = ({projects}) => {
+  return <div>
+    <SectionHeader color="purple">Projects</SectionHeader>
+    {projects.map(project => <div className="indexProject">
+      <div>
+        {project.emoji}
+        <a href={project.link}>{project.title}</a>
+      </div>
+      <p>{project.description}</p>
+    </div>)}
+  </div>
+
+}
 
 export const MostRecentCommit = ({
   commit,
