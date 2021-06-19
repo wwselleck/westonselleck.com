@@ -4,7 +4,6 @@ import * as Dates from "../lib/date";
 
 import { IndexSection } from "./IndexSection";
 import { Header } from "./Header";
-import { Square } from './Square';
 
 interface IndexProps {
   links: Array<{ text: string; href: string, iconUrl?: string }>;
