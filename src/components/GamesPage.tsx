@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Header } from "./Header";
 import { PageWrapper } from "./PageWrapper";
 
 interface GamesPageProps {
@@ -16,8 +15,7 @@ export const GamesPage = ({ games }: GamesPageProps) => {
     return g2.rating - g1.rating;
   });
   return (
-    <PageWrapper>
-      <Header />
+    <div className="gamesPage">
       <p>
         All of the games I've ever (thoroughly) played in order from 1-
         {games.length}
@@ -31,7 +29,7 @@ export const GamesPage = ({ games }: GamesPageProps) => {
           );
         })}
       </ol>
-    </PageWrapper>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import express from "express";
 import * as React from "react";
-import { renderReactComponent } from "../lib/renderReactComponent";
-import { Index } from "../components/Index";
+import { renderHomePage } from "../templates/home-template";
+import { IndexPage } from "../components/pages/index";
 import * as Github from "../services/github";
 import { Config } from "../config";
 import { Data } from "../services/data";
@@ -21,8 +21,8 @@ export class IndexRouter {
       );
       res.header("Content-Type", "text/html");
       res.send(
-        renderReactComponent(
-          <Index projects={projects} links={links} commit={commit} />
+        renderHomePage(
+          <IndexPage projects={projects} links={links} commit={commit} />
         )
       );
     });

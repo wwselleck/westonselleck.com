@@ -54,8 +54,8 @@ document.addEventListener('mousemove', (e) => {
     e.preventDefault();
 
     const el  = getActiveElement()
-    el.style.top = e.clientY;
-    el.style.left = e.clientX;
+    el.style.top = e.pageY;
+    el.style.left = e.pageX;
   }
 }, false);
 
@@ -68,7 +68,6 @@ const itemChoices = [
   ['bread', '🥖'],
   ['candy', '🍬'],
   ['lemon', '🍋'],
-  ['fries', '🍟'],
   ['popcorn', '🍿'],
   ['egg', '🥚'],
   ['spaghetti', '🍝'],

@@ -4,7 +4,7 @@ import {
   GoogleSpreadsheet,
   GoogleSpreadsheetWorksheet,
 } from "google-spreadsheet";
-import { renderReactComponent } from "../lib/renderReactComponent";
+import { renderSecondaryPage } from "../templates/secondary-template";
 import { Config } from "../config";
 import { GamesPage } from "../components/GamesPage";
 
@@ -51,7 +51,7 @@ export class GamesRouter {
       const games = await gamesSheet.getGames();
 
       res.header("Content-Type", "text/html");
-      res.send(renderReactComponent(<GamesPage games={games} />));
+      res.send(renderSecondaryPage(<GamesPage games={games} />));
     });
     return router;
   }

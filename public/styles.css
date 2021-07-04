@@ -58,6 +58,13 @@ p {
  font-weight: 300;
 }
 
+.mainColumn {
+    width: 1000px;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 20vh;
+}
+
 /*
  *
  *
@@ -70,11 +77,6 @@ p {
 .indexWrapper {
 }
 
-.indexMainColumn {
-    width: 1000px;
-    max-width: 80%;
-    margin: 400px auto;
-}
 
 .indexMainContent {
     display: flex;
@@ -109,16 +111,19 @@ p {
     width: 230px;
     height: 230px;
     border-radius: 50%;
-       background: linear-gradient(90deg, var(--blue-1), var(--purple-1), var(--pink));
+    background: linear-gradient(135deg, var(--blue-1), var(--purple-1), var(--pink));
     background-size: 600% 600%;
     z-index: -1;
-    animation: GradientAnimation 15s ease infinite;
+    animation: GradientAnimation 10s ease infinite;
     flex-shrink: 0;
 }
+
 @keyframes GradientAnimation {
-        0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:0% 0%}
+    25%{background-position:100% 0%}
+    50%{background-position:100% 100%}
+    75%{background-position:0% 100%}
+    100%{background-position:0% 0%}
 }
 
 /*
@@ -157,6 +162,15 @@ p {
     margin: 0 auto;
 }
 
+.indexSection {
+    margin-bottom: 48px;
+}
+.indexSection a {
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
 .indexSectionHeader {
     display: flex;
     align-items: center;
@@ -170,10 +184,19 @@ p {
     width: 30px;
     height: 30px;
     margin-right: 16px;
+    animation: GradientAnimation 10s ease infinite;
+    background-size: 600% 600%;
 }
 .indexSectionHeaderSquare.purple {
-    background-color: var(--purple-1);
+    background-image: linear-gradient(135deg, var(--purple-2), var(--purple-1));
 }
+.indexSectionHeaderSquare.pink {
+    background-image: linear-gradient(135deg, var(--purple-1), var(--pink));
+}
+.indexSectionHeaderSquare.blue {
+    background-image: linear-gradient(135deg, var(--blue-3), var(--blue-1));
+}
+
 
 /*
  * Index Projects Section
@@ -190,6 +213,15 @@ p {
     margin-top: 12px;
 }
 
+/*
+ * Index Footer
+ */
+.indexFooter {
+    margin-top: 96px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
 
 
 /*
@@ -236,6 +268,9 @@ a:focus {
  *
  *
  */
+.gamesPage p {
+    font-size: 22px;
+}
 .gamesList {
   margin-top: 48px;
 }
@@ -269,3 +304,15 @@ a:focus {
   margin-right: 12px;
 }
 
+
+/*
+ *
+ *
+ * SECONDARY PAGE
+ *
+ *
+ *
+ */
+.secondaryPageNav {
+    margin-bottom: 32px;
+}

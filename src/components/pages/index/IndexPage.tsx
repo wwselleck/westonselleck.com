@@ -1,9 +1,7 @@
 import * as React from "react";
 
-import * as Dates from "../lib/date";
-
-import { IndexSection } from "./IndexSection";
-import { Header } from "./Header";
+import * as Dates from "../../../lib/date";
+import { Section } from './IndexSection';
 
 interface IndexProps {
   links: Array<{ text: string; href: string, iconUrl?: string }>;
@@ -24,10 +22,10 @@ interface IndexProps {
   };
 }
 
-export const Index = ({ projects, links, commit }: IndexProps) => {
+export const IndexPage = ({ projects, links, commit }: IndexProps) => {
   return (
     <div className="indexWrapper">
-      <div className="indexMainColumn">
+      <div className="mainColumn">
         <div className="indexMainContent">
           <div className="mePic">
             <div className="mePicBackground"></div>
@@ -49,28 +47,23 @@ export const Index = ({ projects, links, commit }: IndexProps) => {
         </div>
         <div className="smallColumn">
           <ProjectsSection projects={projects}/>
+          <Section color="blue" name="Other stuff">
+            <a href="./games">All of the games I've played</a>
+          </Section>
+          <div className="indexFooter">
+          <MostRecentCommit commit={commit}/>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-interface SectionHeaderProps {
-  color: string;
-}
-const SectionHeader: React.FC<SectionHeaderProps> = ({children, color}) => {
-  return <div className="indexSectionHeader">
-    <div className={`indexSectionHeaderSquare ${color}`} />
-    {children}
-  </div>
-}
-
 interface ProjectsSectionProps {
   projects: IndexProps['projects'];
 }
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({projects}) => {
-  return <div>
-    <SectionHeader color="purple">Projects</SectionHeader>
+  return <Section color="pink" name="Projects">
     {projects.map(project => <div className="indexProject">
       <div>
         {project.emoji}
@@ -78,7 +71,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({projects}) => {
       </div>
       <p>{project.description}</p>
     </div>)}
-  </div>
+  </Section>
 
 }
 
@@ -95,7 +88,7 @@ export const MostRecentCommit = ({
 
   return (
     <div className="mostRecentCommit">
-      <img src="./public/Git-Icon-White.png" />
+      <img src="./public/Git-Icon-Black.png" />
       <p className="repo">
         <a target="_blank" href={commit.repo.link}>
           {commit.repo.name}
